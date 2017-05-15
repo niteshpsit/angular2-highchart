@@ -1,0 +1,40 @@
+.colors {
+    .yellow {
+        background-color: #F1C40F;
+    }
+    .skyblue{
+         background-color: #3498DB;
+    }
+    .light-pink{
+         background-color: #E74C3C;
+    }
+    .light-green{
+         background-color: #1ABC9C;
+    }
+    .light-voilet{
+         background-color: #23649E;
+    }
+    .cherry{
+         background-color: #C70000;
+    }
+}
+
+.tile {
+    .cui-block {
+        color: #fff;
+        text-align: center;
+        border-radius: 10px;
+        padding-bottom: 10px;
+    }
+    &-title {
+        margin-bottom: 0;
+    }
+    &-counter {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    &-message {
+        font-size: 12px;
+    }
+}

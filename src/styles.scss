@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./node_modules/@ericsson/oden/assets/styles/global";
+
+/*
+    Overriding the global CSS styles
+*/
+chart {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+.cui-app-header {
+    margin: 0 !important;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,25 @@
+<div>
+   <!--<cui-systembar
+      [profile]="profile"
+      [actions]="systemActions"
+      [profileActions]="profileActions"
+      (onSystemActionClick)="onSystemAction($event)"
+      (onProfileActionClick)="onProfileAction($event)"
+      (onMenuClick)="toggleMenu()"></cui-systembar>-->
+   <!--<cui-main-menu
+      [profile]="profile"
+      [appName]="'RM Quality Matrix'"></cui-main-menu>-->
+    <cui-systembar [profile]="profile"></cui-systembar>
+   <section class="cui-systembar">
+      <div class="cui-systembar-left">
+         <h1>{{appTitle}}</h1>
+      </div>
+   </section>
+   <div id="cui-application">
+      <div class="cui-application">
+         <router-outlet></router-outlet>
+         <div #appOverlay></div>
+      </div>
+   </div>
+   <div #overlay></div>
+</div>

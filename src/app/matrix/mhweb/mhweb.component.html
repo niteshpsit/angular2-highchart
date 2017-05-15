@@ -1,0 +1,48 @@
+<h3>MHWEB ( TR )</h3>
+<cui-row>
+        <cui-column column-size="4">
+            <cui-block>
+                <chart *ngIf="openTrsStatus.xAxis.categories.length > 0" [options]="openTrsStatus"></chart>
+            </cui-block>
+        </cui-column>
+        <!--<cui-column column-size="3"  >
+            <cui-block>
+                <chart *ngIf="trBreachingSLA.series[0].data.length > 0" [options]="trBreachingSLA"></chart>
+            </cui-block>
+        </cui-column>-->
+        <cui-column column-size="4">
+            <cui-block>
+                <chart *ngIf="openTrs.xAxis.categories.length > 0" [options]="openTrs"></chart>
+            </cui-block>
+        </cui-column>
+        <cui-column column-size="4">
+            <cui-block>
+                <list-tr *ngIf="focusListTr.length > 0" [finalData]="focusListTr" [title]="'FOCUS TRS'"></list-tr>
+            </cui-block>
+        </cui-column>
+    </cui-row>
+    <cui-row>
+        
+        <cui-column column-size="4">
+            <cui-block>
+                <chart *ngIf="trTurnAround.xAxis.categories.length > 0" [options]="trTurnAround"></chart>
+            </cui-block>
+        </cui-column>
+        <cui-column column-size="4" >
+            <cui-block>
+                <list-tr *ngIf="listBreachedTRs.length > 0" [finalData]="listBreachedTRs" [title]="'TRS ABOUT TO BREACH/BREACHED SLA'"></list-tr>
+            </cui-block>
+        </cui-column>
+        <cui-column column-size="4">
+            <cui-block>
+                <h4 class="text-center">TR COUNT MTD</h4>
+                <chart *ngIf="averageTRCounter.series[0].data.length > 0" [options]="averageTRCounter"></chart>
+            </cui-block>
+        </cui-column>
+        <!--<cui-column column-size="3">
+            <cui-block>
+                <h4 class="text-center">TR TREND ( STATUS )</h4>
+                <img src="assets/trTrend.png" alt="TR TRENDS STATUS" class="img-responsive" />
+            </cui-block>
+        </cui-column>-->
+    </cui-row>

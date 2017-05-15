@@ -1,0 +1,21 @@
+        <h4 class="text-center">{{title}}</h4>
+        <cui-column column-size="3" class="filterTable">
+            <cui-list-controller>
+                <cui-list-controller-filter (onFilterChange)="onFilterTable($event)" placeholder=""></cui-list-controller-filter>
+            </cui-list-controller>
+        </cui-column>
+    <cui-table *ngIf="tableDataSet.tableData.length > 0"
+        [headers]="list.tableHeaders"
+        [data]="tableDataSet.displayTableData"
+        (onOrderChanged)="tableOrderChanged($event)"
+        [pagination]="true"
+        [paginationData]="tableDataSet.paginationData"
+        (onBatchChanged)="onBatchChange($event)">
+    </cui-table>
+    <cui-table 
+        *ngIf="tableDataSet.tableData && tableDataSet.tableData.length === 0"
+        [headers]="list.tableHeaders" >
+    </cui-table>
+    <cui-column *ngIf="tableDataSet.tableData && tableDataSet.tableData.length === 0">
+        <div class="textCenter">No TRs</div>
+    </cui-column>

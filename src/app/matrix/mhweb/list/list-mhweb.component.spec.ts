@@ -1,0 +1,5 @@
+.filterTable {
+    input[type="text"] {
+        
+    }
+}
